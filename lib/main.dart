@@ -1,6 +1,7 @@
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 import 'package:desktop_window/desktop_window.dart';
+import 'package:hello_flame/canvas/main_menu.dart';
 import 'package:hello_flame/manager/main_game.dart';
 
 const Size customizeSize = Size(640, 360);
@@ -10,5 +11,9 @@ void main() async {
   // await DesktopWindow.setWindowSize(customizeSize);
 
   final mainGame = MainGame();
-  runApp(GameWidget(game: mainGame));
+  runApp(GameWidget(
+    game: mainGame,
+    initialActiveOverlays: const [MainMenu.id],
+    overlayBuilderMap: {'mainMenu': (context, _) => MainMenu(game: mainGame)},
+  ));
 }

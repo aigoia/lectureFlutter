@@ -1,6 +1,8 @@
 import 'package:flame/components.dart';
-import 'package:hello_flame/component/player_animation.dart';
-import 'package:hello_flame/manager/config.dart';
+
+import '../manager/config.dart';
+import 'player_animation.dart';
+
 
 class PlayerMove extends PlayerAnimation {
   bool isFlip = false;

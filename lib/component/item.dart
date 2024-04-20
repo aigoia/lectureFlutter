@@ -1,8 +1,10 @@
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
-import 'package:hello_flame/manager/assets.dart';
-import 'package:hello_flame/manager/config.dart';
-import 'package:hello_flame/manager/main_game.dart';
+
+import '../manager/assets.dart';
+import '../manager/config.dart';
+import '../manager/main_game.dart';
+
 
 class Item extends SpriteGroupComponent<ItemType>
     with HasGameRef<MainGame>, CollisionCallbacks, HasVisibility {

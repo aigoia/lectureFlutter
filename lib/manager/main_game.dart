@@ -1,13 +1,13 @@
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:flame/game.dart';
-import 'package:hello_flame/component/background.dart';
-import 'package:hello_flame/component/item_position.dart';
-import 'package:hello_flame/component/player_animation.dart';
-import 'package:hello_flame/component/player_move.dart';
-import 'package:hello_flame/component/player_ray.dart';
-import 'package:hello_flame/manager/audio.dart';
-import 'package:hello_flame/manager/keyboard.dart';
+
+import '../component/background.dart';
+import '../component/item_position.dart';
+import '../component/player_move.dart';
+import 'audio.dart';
+import 'keyboard.dart';
+
 
 class MainGame extends FlameGame
     with HasKeyboardHandlerComponents, HasCollisionDetection {
@@ -21,10 +21,10 @@ class MainGame extends FlameGame
     await images.loadAllImages();
 
     addAll([
-      PlayerRay(),
+      // PlayerRay(),
       audio = Audio(),
       keyboard = Keyboard(),
-      // Background(),
+      Background(),
       player = PlayerMove(),
       itemPosition = ItemPosition(),
     ]);

@@ -1,11 +1,14 @@
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
-import 'package:hello_flame/manager/assets.dart';
-import 'package:hello_flame/manager/config.dart';
-import 'package:hello_flame/manager/main_game.dart';
+
+import '../manager/assets.dart';
+import '../manager/config.dart';
+import '../manager/main_game.dart';
+
 
 class PlayerAnimation extends SpriteAnimationGroupComponent
     with HasGameRef<MainGame>, CollisionCallbacks {
+  late final hitBoxList;
 
   @override
   Future<void> onLoad() async {
@@ -46,7 +49,9 @@ class PlayerAnimation extends SpriteAnimationGroupComponent
       PlayerState.track: trackAnimation,
     };
 
-    add(RectangleHitbox());
+    final hitBox = RectangleHitbox();
+    hitBoxList = [hitBox];
+    add(hitBox);
     return super.onLoad();
   }
 }

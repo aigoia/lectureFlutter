@@ -1,6 +1,8 @@
 import 'package:flame/components.dart';
-import 'package:hello_flame/component/item.dart';
-import 'package:hello_flame/manager/main_game.dart';
+
+import '../manager/main_game.dart';
+import 'item.dart';
+
 
 class ItemPosition extends PositionComponent with HasGameRef<MainGame> {
   final itemList = [
@@ -12,7 +14,7 @@ class ItemPosition extends PositionComponent with HasGameRef<MainGame> {
   @override
   Future<void> onLoad() async {
     addAll(itemList);
-    // for (var element in itemList) {element.isVisible = false;}
+    for (var element in itemList) {element.isVisible = false;}
     return super.onLoad();
   }
 }

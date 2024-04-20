@@ -1,6 +1,8 @@
 import 'package:flame/components.dart';
-import 'package:hello_flame/manager/assets.dart';
-import 'package:hello_flame/manager/main_game.dart';
+
+import '../manager/assets.dart';
+import '../manager/main_game.dart';
+
 
 class Background extends SpriteComponent with HasGameRef<MainGame> {
 
