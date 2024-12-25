@@ -1,8 +1,8 @@
-# hello_flame
+# Hello Flame!
 
 A new Flutter project.
 
-## Getting Started
+## Getting started
 
 This project is a starting point for a Flutter application.
 
