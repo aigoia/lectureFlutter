@@ -1,6 +1,6 @@
 # Hello Flame!
 
-A new Flutter project.
+A simple Flutter project.
 
 ## Getting started
 
